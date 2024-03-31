@@ -49,18 +49,19 @@ const Nav = () => {
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}>
+            transition={{ duration: 0.85, ease: "easeIn" }}
+            className="mobile__menu">
             <IoClose onClick={() => setToggle(false)} color="white" />
             {["Home", "Skills", "Projects", "Experience"].map((item) => (
               <ul>
-                <li className="navbar-mobile__button" key={"link-${item}"}>
+                <li key={"link-${item}"}>
                   <img
-                    className="navbar-mobile__icon"
+                    className="mobile__menu-icon"
                     src={icons[item]}
                     alt="icon"
                   />
                   <a
-                    className="navbar-button__label"
+                    className="mobile__menu-label"
                     href={`#${item}`}
                     onClick={() => setToggle(false)}>
                     {item}

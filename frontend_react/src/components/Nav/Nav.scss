@@ -160,10 +160,11 @@
   border-radius: 1.3rem;
   background-color: var(--navy-secondary);
 }
-.navbar-mobile__menu {
+.mobile__menu {
   display: flex;
+  justify-items: center;
   flex-direction: column;
-  width: 80%;
-
+  width: 87.5;
+  height: 85vh;
   background-color: var(--navy-secondary);
 }
