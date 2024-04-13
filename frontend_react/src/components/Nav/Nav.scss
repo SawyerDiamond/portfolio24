@@ -162,9 +162,31 @@
 }
 .mobile__menu {
   display: flex;
-  justify-items: center;
-  flex-direction: column;
-  width: 87.5;
-  height: 85vh;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+  z-index: 2;
+
+  margin-top: 3.5vh;
+  width: 87.5vw;
+  height: 10vh;
+
+  border-radius: 1.5rem;
   background-color: var(--navy-secondary);
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.mobile__menu-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--navy-primary);
+}
+.mobile__menu-icon {
+  width: 2rem;
+  height: 2rem;
 }

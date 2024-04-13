@@ -5,7 +5,7 @@ import { images, icons } from "../../constants";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -37,35 +37,33 @@ const Nav = () => {
         </a>
       </div>
       <div className="mobile-container" aria-label="mobile-container">
-        <div className="navbar-mobile flex--spaced">
-          <img src={images.logo} className="navbar-mobile__logo" alt="logo" />
+        <div className={`navbar-mobile flex--spaced ${toggle ? "hidden" : ""}`}>
+          <img
+            src={images.logo}
+            className={`navbar-mobile__logo ${toggle ? "hidden" : ""}`}
+            alt="logo"
+          />
           <HiMenuAlt3
             onClick={() => setToggle(true)}
-            className="navbar-mobile__icon"
+            className={`navbar-mobile__icon ${toggle ? "hidden" : ""}`}
             color="white"
           />
         </div>
 
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeIn" }}
+            whileInView={{ x: [400, 0] }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             className="mobile__menu">
             <IoClose onClick={() => setToggle(false)} color="white" />
             {["Home", "Skills", "Projects", "Experience"].map((item) => (
               <ul>
-                <li key={"link-${item}"}>
+                <li key={"link-${item}"} className="mobile__menu-item">
                   <img
                     className="mobile__menu-icon"
                     src={icons[item]}
                     alt="icon"
                   />
-                  <a
-                    className="mobile__menu-label"
-                    href={`#${item}`}
-                    onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
                 </li>
               </ul>
             ))}
