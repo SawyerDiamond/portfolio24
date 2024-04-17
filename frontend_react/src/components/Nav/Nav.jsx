@@ -38,11 +38,13 @@ const Nav = () => {
       </div>
       <div className="mobile-container" aria-label="mobile-container">
         <div className={`navbar-mobile flex--spaced ${toggle ? "hidden" : ""}`}>
+          {/*Mobile hamburger menu icon*/}
           <img
             src={images.logo}
             className={`navbar-mobile__logo ${toggle ? "hidden" : ""}`}
             alt="logo"
           />
+          {/*Mobile hamburger menu icon*/}
           <HiMenuAlt3
             onClick={() => setToggle(true)}
             className={`navbar-mobile__icon ${toggle ? "hidden" : ""}`}
@@ -50,23 +52,32 @@ const Nav = () => {
           />
         </div>
 
+        {/*Main mobile menu, followed by a close button*/}
         {toggle && (
           <motion.div
             whileInView={{ x: [400, 0] }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="mobile__menu">
-            <IoClose onClick={() => setToggle(false)} color="white" />
-            {["Home", "Skills", "Projects", "Experience"].map((item) => (
-              <ul>
-                <li key={"link-${item}"} className="mobile__menu-item">
-                  <img
-                    className="mobile__menu-icon"
-                    src={icons[item]}
-                    alt="icon"
-                  />
-                </li>
-              </ul>
-            ))}
+            transition={{ duration: 0.6 }}
+            className="mobile-container">
+            <div className="mobile__menu">
+              {["Home", "Skills", "Projects", "Experience"].map((item) => (
+                <ul className="mobile__menu-item">
+                  <li key={"link-${item}"}>
+                    <img
+                      className="mobile__menu-item--icon"
+                      src={icons[item]}
+                      alt="icon"
+                    />
+                  </li>
+                </ul>
+              ))}
+            </div>
+
+            <IoClose
+              onClick={() => setToggle(false)}
+              className={`mobile__menu-close ${!toggle ? "hidden" : ""}`}
+              size={36}
+              color="white"
+            />
           </motion.div>
         )}
       </div>
