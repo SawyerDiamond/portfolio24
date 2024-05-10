@@ -59,14 +59,22 @@ p {
   align-items: center;
 }
 
-.flex--v {
-  display: flex;
-  justify-content: center;
-}
-
 .flex--h {
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.flex--v {
+  display: flex;
   align-items: center;
+  flex-direction: row;
+}
+
+.flex--around {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .flex--spaced {

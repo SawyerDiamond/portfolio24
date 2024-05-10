@@ -19,7 +19,7 @@ const Nav = () => {
         </div>
         <ul className="navbar__links flex--spaced">
           {["Home", "Skills", "Projects", "Experience"].map((item) => (
-            <li className="navbar__button flex--h" key={"link-${item}"}>
+            <li className="navbar__button flex--v" key={"link-${item}"}>
               <img
                 className="navbar__button-icon"
                 src={icons[item]}
@@ -31,7 +31,7 @@ const Nav = () => {
             </li>
           ))}
         </ul>
-        <a className="navbar__contact flex--h" href="#contact-point">
+        <a className="navbar__contact flex--v" href="#contact-point">
           <img src={icons.Contact} alt="Contact" />
           <h3>Contact</h3>
         </a>
