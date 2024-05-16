@@ -1,9 +1,11 @@
 .navbar {
   width: 94%;
   height: 4rem;
+  position: absolute;
   margin-top: 1.6rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  display: block;
   border-radius: 1.2rem;
   z-index: 2;
   background: var(--navy-secondary);
@@ -27,6 +29,7 @@
   padding: 0.7rem;
   padding-right: 2rem;
   border-radius: 1.2rem;
+  font-size: 1.35rem;
 }
 @media screen and (min-width: 2400px) {
   .navbar__logo {
@@ -34,7 +37,7 @@
     padding-right: 2.5rem;
     border-radius: 1.4rem;
   }
-  .navbar__logo h2 {
+  .navbar__logo h3 {
     font-size: 2.5rem;
   }
 }
@@ -57,6 +60,7 @@
 
 .navbar__button {
   padding: 0.5rem;
+  font-weight: bold;
 }
 .navbar__button:hover {
   text-decoration: underline;
@@ -99,6 +103,7 @@
 
 .navbar__button-label {
   margin-right: 0.5rem;
+  font-weight: bold;
 }
 @media screen and (min-width: 2400px) {
   .navbar__button-label {

@@ -15,7 +15,7 @@ const Nav = () => {
       <div className="navbar flex--spaced">
         <div className="navbar__logo flex">
           <img src={images.logo} alt="logo" />
-          <h2>SAWYER</h2>
+          <h3>SAWYER</h3>
         </div>
         <ul className="navbar__links flex--spaced">
           {["Home", "Skills", "Projects", "Experience"].map((item) => (
