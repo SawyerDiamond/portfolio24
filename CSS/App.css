@@ -65,6 +65,12 @@ p {
   flex-direction: row;
 }
 
+.flex--col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .flex--v {
   display: flex;
   align-items: center;

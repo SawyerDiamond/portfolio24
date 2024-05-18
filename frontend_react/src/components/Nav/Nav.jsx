@@ -6,26 +6,28 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
+import useDeviceDetect from "../../hooks/useDeviceDetect";
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
-
+  const { isMobile, isTablet, isDesktop } = useDeviceDetect();
   return (
     <nav>
-      <div className="navbar flex--spaced">
+      <div className={`navbar flex--spaced ${isMobile ? "hidden" : ""}`}>
         <div className="navbar__logo flex">
           <img src={images.logo} alt="logo" />
           <h3>SAWYER</h3>
         </div>
         <ul className="navbar__links flex--spaced">
           {["Home", "Skills", "Projects", "Experience"].map((item) => (
-            <li className="navbar__button flex--v" key={"link-${item}"}>
+            <li className="navbar__button flex--v" key={`link-${item}`}>
               <img
                 className="navbar__button-icon"
                 src={icons[item]}
                 alt="icon"
               />
-              <a className="navbar__button-label" href={`#${item}`}>
+              <a
+                className={`navbar__button-label ${isDesktop ? "" : "hidden"}`}
+                href={`#${item}`}>
                 {item}
               </a>
             </li>
@@ -36,18 +38,18 @@ const Nav = () => {
           <h3>Contact</h3>
         </a>
       </div>
-      <div className="mobile-container" aria-label="mobile-container">
-        <div className={`navbar-mobile flex--spaced ${toggle ? "hidden" : ""}`}>
-          {/*Mobile hamburger menu icon*/}
-          <img
-            src={images.logo}
-            className={`navbar-mobile__logo ${toggle ? "hidden" : ""}`}
-            alt="logo"
-          />
+      <div
+        className={`mobile-container ${isMobile ? "" : "hidden"}`}
+        aria-label="mobile-container">
+        <div className="navbar-mobile flex--spaced">
+          <img src={images.logo} className="navbar-mobile__logo" alt="logo" />
           {/*Mobile hamburger menu icon*/}
           <HiMenuAlt3
-            onClick={() => setToggle(true)}
-            className={`navbar-mobile__icon ${toggle ? "hidden" : ""}`}
+            onClick={() => {
+              console.log("Hamburger menu icon clicked");
+              setToggle(true);
+            }}
+            className="navbar-mobile__icon"
             color="white"
           />
         </div>
@@ -61,7 +63,7 @@ const Nav = () => {
             <div className="mobile__menu">
               {["Home", "Skills", "Projects", "Experience"].map((item) => (
                 <ul className="mobile__menu-item">
-                  <li key={"link-${item}"}>
+                  <li key={`link-${item}`}>
                     <img
                       className="mobile__menu-item--icon"
                       src={icons[item]}
@@ -74,7 +76,7 @@ const Nav = () => {
 
             <IoClose
               onClick={() => setToggle(false)}
-              className={`mobile__menu-close ${!toggle ? "hidden" : ""}`}
+              className="mobile__menu-close"
               size={36}
               color="white"
             />

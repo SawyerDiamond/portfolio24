@@ -2,7 +2,7 @@
 .navbar {
   width: 94%;
   height: 4rem;
-  position: absolute;
+  position: fixed;
   margin-top: 1.6rem;
   margin-left: 3%;
   margin-right: 3%;
@@ -16,11 +16,6 @@
   @media screen and (min-width: 2400px) {
     height: 6rem;
     border-radius: 2rem;
-  }
-  @media screen and (max-width: 1000px) {
-    &.flex--spaced {
-      display: none;
-    }
   }
 }
 
@@ -144,14 +139,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media screen and (min-width: 1000px) {
-    display: none;
-  }
 }
 .navbar-mobile {
   width: 75%;
   margin-top: 3rem;
+  position: fixed;
 }
 .navbar-mobile__logo {
   width: 76px;

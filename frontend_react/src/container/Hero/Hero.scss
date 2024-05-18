@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
 }
-.hero__bg {
+.bg {
   width: 100vw;
   height: auto;
   top: 0;
@@ -39,8 +39,7 @@
 }
 
 .hero__desc {
-  width: 33vw;
-
+  width: 34vw;
   line-height: 0.925;
   text-overflow: wrap;
 }
@@ -48,10 +47,11 @@
 .hero__right {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
-.hero__image {
-  width: 12.5vw;
-  height: auto;
+.hero__logo {
+  width: 12rem;
+  height: 12rem;
 
   border-radius: 3.5vw;
   border-style: solid;

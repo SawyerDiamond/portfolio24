@@ -55,6 +55,11 @@ p {
   justify-content: center;
   flex-direction: row;
 }
+.flex--col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .flex--v {
   display: flex;
   align-items: center;
@@ -79,7 +84,6 @@ p {
     padding: 4rem 1rem 2rem;
   }
 }
-
 .hidden {
   display: none;
 }
