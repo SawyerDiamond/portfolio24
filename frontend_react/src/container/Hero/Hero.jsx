@@ -7,6 +7,12 @@ import useDeviceDetect from "../../hooks/useDeviceDetect";
 
 const Header = () => {
   const { isMobile, isTablet, isDesktop } = useDeviceDetect();
+  const textAnimationProps = isDesktop
+    ? { x: [-500, 0], opacity: [0, 1] }
+    : { y: [-500, 0], opacity: [0, 1] };
+  const shelfAnimationProps = isDesktop
+    ? { x: [500, 0], opacity: [0, 1] }
+    : { y: [300, 0], opacity: [0, 1] };
   return (
     <div className="hero">
       <div
@@ -14,7 +20,7 @@ const Header = () => {
           isDesktop ? "flex--around" : "flex--col"
         }`}>
         <motion.div
-          whileInView={{ x: [-500, 0], opacity: [0, 1] }}
+          whileInView={textAnimationProps}
           transition={{ stiffness: 0, duration: 1.1 }}
           className="hero__left">
           <h1 className="hero__intro">
@@ -26,7 +32,7 @@ const Header = () => {
         </motion.div>
 
         <motion.div
-          whileInView={{ x: [300, 0], opacity: [0, 1] }}
+          whileInView={shelfAnimationProps}
           transition={{ stiffness: 0, duration: 1.1 }}
           className="hero__right">
           <img

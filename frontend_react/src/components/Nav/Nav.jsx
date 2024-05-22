@@ -13,7 +13,7 @@ const Nav = () => {
   return (
     <nav>
       <div className={`navbar flex--spaced ${isMobile ? "hidden" : ""}`}>
-        <div className="navbar__logo flex">
+        <div className={`flex navbar__logo ${isMobile ? "hidden" : ""}`}>
           <img src={images.logo} alt="logo" />
           <h3>SAWYER</h3>
         </div>
@@ -37,51 +37,6 @@ const Nav = () => {
           <img src={icons.Contact} alt="Contact" />
           <h3>Contact</h3>
         </a>
-      </div>
-      <div
-        className={`mobile-container ${isMobile ? "" : "hidden"}`}
-        aria-label="mobile-container">
-        <div className="navbar-mobile flex--spaced">
-          <img src={images.logo} className="navbar-mobile__logo" alt="logo" />
-          {/*Mobile hamburger menu icon*/}
-          <HiMenuAlt3
-            onClick={() => {
-              console.log("Hamburger menu icon clicked");
-              setToggle(true);
-            }}
-            className="navbar-mobile__icon"
-            color="white"
-          />
-        </div>
-
-        {/*Main mobile menu, followed by a close button*/}
-        {toggle && (
-          <motion.div
-            animate={{ x: toggle ? 0 : 400 }}
-            transition={{ duration: 0.6 }}
-            className="mobile-container">
-            <div className="mobile__menu">
-              {["Home", "Skills", "Projects", "Experience"].map((item) => (
-                <ul className="mobile__menu-item">
-                  <li key={`link-${item}`}>
-                    <img
-                      className="mobile__menu-item--icon"
-                      src={icons[item]}
-                      alt="icon"
-                    />
-                  </li>
-                </ul>
-              ))}
-            </div>
-
-            <IoClose
-              onClick={() => setToggle(!toggle)}
-              className="mobile__menu-close"
-              size={36}
-              color="white"
-            />
-          </motion.div>
-        )}
       </div>
     </nav>
   );
