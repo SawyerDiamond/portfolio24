@@ -5,6 +5,13 @@
   align-items: center;
   justify-content: center;
 }
+.hero__left {
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .bg {
   width: 100vw;
   height: auto;
@@ -30,18 +37,32 @@
   }
 
   & span:nth-child(n + 1):nth-child(-n + 3) {
-    padding-right: 1.25rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+  }
+  & span:nth-child(n + 1):nth-child(-n + 2) {
+    padding-right: 1vw;
+    @media (max-width: 1024px) {
+      padding-right: 1.75vw;
+    }
+  }
+  @media (max-width: 1024px) {
+    font-size: 9vw;
+    margin-bottom: 0.5rem;
+    text-align: center;
   }
 }
 
 .hero__desc {
   width: 34vw;
   line-height: 0.925;
-  text-overflow: wrap;
+  @media (max-width: 1024px) {
+    text-align: center;
+    width: 52vw;
+    font-size: 4.5vw;
+  }
 }
 
 .hero__right {
@@ -50,10 +71,10 @@
   align-items: center;
 }
 .hero__logo {
-  width: 12rem;
-  height: 12rem;
+  width: 11vw;
+  height: 11vw;
 
-  border-radius: 3.5vw;
+  border-radius: 30%;
   border-style: solid;
   border-color: white;
   border-width: 0.25vw;
@@ -64,14 +85,14 @@
 }
 
 .hero__shelf {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
   background-color: var(--navy-secondary);
 
   border-radius: 1rem;
   margin-left: 2vw;
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 }
 .hero__shelf--item {
   img {
@@ -84,7 +105,9 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
   border-radius: 0.6rem;
-
+  @media (max-width: 1024px) {
+    margin: 1rem 2rem 1rem 2rem;
+  }
   &:nth-child(1) {
     background: linear-gradient(67.93deg, #138ef0 23.56%, #0971f0 79.49%);
     &:hover {

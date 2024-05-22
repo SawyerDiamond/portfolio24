@@ -57,7 +57,7 @@ const Nav = () => {
         {/*Main mobile menu, followed by a close button*/}
         {toggle && (
           <motion.div
-            whileInView={{ x: [400, 0] }}
+            animate={{ x: toggle ? 0 : 400 }}
             transition={{ duration: 0.6 }}
             className="mobile-container">
             <div className="mobile__menu">
@@ -75,7 +75,7 @@ const Nav = () => {
             </div>
 
             <IoClose
-              onClick={() => setToggle(false)}
+              onClick={() => setToggle(!toggle)}
               className="mobile__menu-close"
               size={36}
               color="white"
