@@ -14,7 +14,7 @@ const Header = () => {
     ? { x: [500, 0], opacity: [0, 1] }
     : { y: [300, 0], opacity: [0, 1] };
   return (
-    <div className="hero">
+    <section className="hero">
       <div
         className={`hero__container ${
           isDesktop ? "flex--around" : "flex--col"
@@ -66,7 +66,7 @@ const Header = () => {
         className={`bg ${isMobile ? "" : "hidden"}`}
         alt="hero background"
       />
-    </div>
+    </section>
   );
 };
 

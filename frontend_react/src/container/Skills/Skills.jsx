@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
 
 const Skills = () => {
-  return null;
+  return <section className="skills"></section>;
 };
 
 export default Skills;
