@@ -31,13 +31,13 @@
   line-height: 0.9;
 }
 .hero__intro span:nth-child(1) {
-  background: linear-gradient(67.93deg, #138ef0 23.56%, #0971f0 79.49%);
+  background: var(--blue-gradient);
 }
 .hero__intro span:nth-child(2) {
-  background: linear-gradient(31.33deg, #f2d253 0%, #ed994f 100%);
+  background: var(--pink-gradient);
 }
 .hero__intro span:nth-child(3) {
-  background: linear-gradient(67.93deg, #fcc00a 23.56%, #f7991d 79.49%);
+  background: var(--yellow-gradient);
 }
 .hero__intro span:nth-child(n+1):nth-child(-n+3) {
   -webkit-background-clip: text;
@@ -120,19 +120,19 @@
   }
 }
 .hero__shelf--item:nth-child(1) {
-  background: linear-gradient(67.93deg, #138ef0 23.56%, #0971f0 79.49%);
+  background: var(--blue-gradient);
 }
 .hero__shelf--item:nth-child(1):hover {
   box-shadow: var(--blue-shadow);
 }
 .hero__shelf--item:nth-child(2) {
-  background: var(--navy-primary);
+  background: var(--pink-gradient);
 }
 .hero__shelf--item:nth-child(2):hover {
   box-shadow: var(--navy-shadow);
 }
 .hero__shelf--item:nth-child(3) {
-  background: linear-gradient(67.93deg, #fcc00a 23.56%, #f7991d 79.49%);
+  background: var(--yellow-gradient);
 }
 .hero__shelf--item:nth-child(3):hover {
   box-shadow: var(--gold-shadow);

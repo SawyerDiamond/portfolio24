@@ -8,11 +8,10 @@
 .skills__header {
   display: flex;
   align-items: center;
-
-  img {
-    width: 3rem;
-    height: auto;
-  }
+}
+.skills__header img {
+  width: 3rem;
+  height: auto;
 }
 
 .skills__container {

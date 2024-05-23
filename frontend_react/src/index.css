@@ -15,6 +15,10 @@
   --blue-shadow: 0px 0px 15px #105fd660;
   --navy-shadow: 0px 0px 10px #233c719e;
   --gold-shadow: 0px 0px 15px #f7991d78;
+
+  --blue-gradient: linear-gradient(67.93deg, #138ef0 23.56%, #0971f0 79.49%);
+  --pink-gradient: linear-gradient(67.93deg, #e938c0 23.56%, #f15f79 79.49%);
+  --yellow-gradient: linear-gradient(67.93deg, #fcc00a 23.56%, #f7991d 79.49%);
 }
 
 html {

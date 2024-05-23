@@ -7,12 +7,8 @@ import useDeviceDetect from "../../hooks/useDeviceDetect";
 
 const Header = () => {
   const { isMobile, isTablet, isDesktop } = useDeviceDetect();
-  const textAnimationProps = isDesktop
-    ? { x: [-500, 0], opacity: [0, 1] }
-    : { y: [-500, 0], opacity: [0, 1] };
-  const shelfAnimationProps = isDesktop
-    ? { x: [500, 0], opacity: [0, 1] }
-    : { y: [300, 0], opacity: [0, 1] };
+  const textAnimationProps = { y: [-300, 0], opacity: [0, 1] };
+  const shelfAnimationProps = { y: [300, 0], opacity: [0, 1] };
   return (
     <section className="hero">
       <div
@@ -21,7 +17,7 @@ const Header = () => {
         }`}>
         <motion.div
           whileInView={textAnimationProps}
-          transition={{ stiffness: 0, duration: 1.1 }}
+          transition={{ duration: 1 }}
           className="hero__left">
           <h1 className="hero__intro">
             <span>Hi.</span>
@@ -33,7 +29,7 @@ const Header = () => {
 
         <motion.div
           whileInView={shelfAnimationProps}
-          transition={{ stiffness: 0, duration: 1.1 }}
+          transition={{ duration: 1 }}
           className="hero__right">
           <img
             src={images.logo}

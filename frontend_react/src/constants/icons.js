@@ -3,7 +3,7 @@ import Skills from "../assets/bolt.svg";
 import Projects from "../assets/proj.svg";
 import Experience from "../assets/edu.svg";
 import Contact from "../assets/mail.svg";
-import LinkedIn from "../assets/linkedin.svg";
+import Dribbble from "../assets/dribbble2.svg";
 import GitHub from "../assets/github-two.svg";
 import Resume from "../assets/resume.svg";
 export default {
@@ -12,7 +12,7 @@ export default {
   Projects,
   Experience,
   Contact,
-  LinkedIn,
+  Dribbble,
   GitHub,
   Resume,
 };

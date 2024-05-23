@@ -123,7 +123,7 @@
   padding: 0.8rem;
 }
 .navbar__contact:hover {
-  background: linear-gradient(87.53deg, #0971f0 -28.38%, #138ef0 109.3%);
+  background: var(--blue-gradient);
   box-shadow: var(--blue-shadow);
   transition: all 1000ms ease;
 }

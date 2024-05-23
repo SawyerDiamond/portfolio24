@@ -27,13 +27,13 @@
 .hero__intro {
   line-height: 0.9;
   & span:nth-child(1) {
-    background: linear-gradient(67.93deg, #138ef0 23.56%, #0971f0 79.49%);
+    background: var(--blue-gradient);
   }
   & span:nth-child(2) {
-    background: linear-gradient(31.33deg, #f2d253 0%, #ed994f 100%);
+    background: var(--pink-gradient);
   }
   & span:nth-child(3) {
-    background: linear-gradient(67.93deg, #fcc00a 23.56%, #f7991d 79.49%);
+    background: var(--yellow-gradient);
   }
 
   & span:nth-child(n + 1):nth-child(-n + 3) {
@@ -109,19 +109,19 @@
     margin: 1rem 2rem 1rem 2rem;
   }
   &:nth-child(1) {
-    background: linear-gradient(67.93deg, #138ef0 23.56%, #0971f0 79.49%);
+    background: var(--blue-gradient);
     &:hover {
       box-shadow: var(--blue-shadow);
     }
   }
   &:nth-child(2) {
-    background: var(--navy-primary);
+    background: var(--pink-gradient);
     &:hover {
       box-shadow: var(--navy-shadow);
     }
   }
   &:nth-child(3) {
-    background: linear-gradient(67.93deg, #fcc00a 23.56%, #f7991d 79.49%);
+    background: var(--yellow-gradient);
     &:hover {
       box-shadow: var(--gold-shadow);
     }
