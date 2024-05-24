@@ -1,31 +1,35 @@
-.skills {
+.project {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Center items horizontally */
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
-.skills h1 {
+.project h1 {
   font-weight: 800;
 }
 
-.skills__container {
+.project__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align items to the start */
   width: 80vw; /* Set the width of the content */
 }
 
-.skills__header {
+.project__header {
   display: flex;
 }
-.skills__header img {
-  width: 3.5rem;
+.project__header img {
+  width: 3.6rem;
   height: auto;
 }
 
-.skills__list {
+.project__list {
   width: 100%;
   height: 20rem;
   background-color: purple;
+}
+
+.project__profile-item {
+  width: auto;
 }
